@@ -48,7 +48,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/WaghAshu03/my_linux_templates",
+          // editUrl: "https://github.com/WaghAshu03/my_linux_templates",
         },
         // blog: false,
         theme: {
