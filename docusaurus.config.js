@@ -136,7 +136,7 @@ const config = {
       prism: {
         // theme: prismThemes.github,
         theme: prismThemes.nightOwl,
-        darkTheme: prismThemes.nightOwl,
+        // darkTheme: prismThemes.nightOwlLight,
         // darkTheme: prismThemes.dracula,
         // darkTheme: prismThemes.oneDark,
         // darkTheme: prismThemes.vsDark,

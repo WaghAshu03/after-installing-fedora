@@ -6,13 +6,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #292881;
-  --ifm-color-primary-dark: #252474;
-  --ifm-color-primary-darker: #23226e;
-  --ifm-color-primary-darkest: #1d1c5a;
-  --ifm-color-primary-light: #2d2c8e;
-  --ifm-color-primary-lighter: #2f2e94;
-  --ifm-color-primary-lightest: #3534a8;
+  --ifm-color-primary: #2e1ea9;
+  --ifm-color-primary-dark: #291b98;
+  --ifm-color-primary-darker: #271990;
+  --ifm-color-primary-darkest: #201576;
+  --ifm-color-primary-light: #3321ba;
+  --ifm-color-primary-lighter: #3522c2;
+  --ifm-color-primary-lightest: #3e2ad9;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
@@ -30,37 +30,86 @@
 }
 
 [data-theme="dark"] {
-  background-color: #000;
+  --ifm-color-primary: #199cf2;
+  --ifm-color-primary-dark: #0d8ee3;
+  --ifm-color-primary-darker: #0c86d7;
+  --ifm-color-primary-darkest: #0a6fb1;
+  --ifm-color-primary-light: #32a7f3;
+  --ifm-color-primary-lighter: #3facf4;
+  --ifm-color-primary-lightest: #65bdf6;
+  --ifm-background-color: #101010;
+}
+
+[data-theme="dark"] {
+  background-color: rgb(7, 7, 7);
 }
 
 [data-theme="dark"] .navbar {
-  background-color: #000;
-  /* position: relative; */
-  z-index: 1;
-  /* backdrop-filter: blur(5px); */
-  /* border-bottom: 1px solid #43484f; */
+  background-color: rgb(7, 7, 7);
+}
+
+@media (min-width: 1000px) {
+  [data-theme="dark"] nav.navbar.navbar--fixed-top {
+    background-color: rgb(7, 7, 7, 0.6);
+  }
+
+  [data-theme="light"] nav.navbar.navbar--fixed-top {
+    background-color: rgb(255, 255, 255, 0.7);
+  }
+
+  nav.navbar.navbar--fixed-top {
+    backdrop-filter: blur(12px);
+  }
 }
 
 [data-theme="dark"] .navbar-sidebar {
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(7, 7, 7, 0.5);
+  /* background-color: red; */
   backdrop-filter: blur(5px);
-  /* border-bottom: 1px solid #43484f; */
+}
+
+[data-theme="dark"] .sidebar_njMd {
+  border-right: 1px solid #404040;
+  /* background-color: red !important; */
+  /* backdrop-filter: blur(5px); */
 }
 
 [data-theme="dark"] .footer {
-  background-color: #151515;
-  /* border-top: 1px solid #43484f; */
+  background-color: #161616;
+  border-top: 1px solid #252525;
+}
+
+[data-theme="light"] .footer {
+  background-color: #101010;
+  border-top: 1px solid #999;
 }
 
 .hero {
-  /* background-color: red; */
-  /* --ifm-hero-background-color: none; */
-  /* background-color: red; */
   background-image: url(/static/img/bg.jpg);
-  /* background-position: bottom; */
   background-size: cover;
   backdrop-filter: blur(5px);
-  /* min-height: 80vh; */
-  /* padding: 15vh 10vw !important; */
   color: black;
+}
+
+[data-theme="dark"] .theme-code-block {
+  border: 1px solid #404040;
+}
+
+[data-theme="dark"] .codeBlockTitle_Ktv7 {
+  background-color: #161616;
+  color: white;
+  border-bottom: 1px solid #404040 !important;
+}
+
+[data-theme="dark"] .prism-code {
+  /* Target code block element */
+
+  background-color: black !important;
+}
+
+[data-theme="light"] .theme-code-block {
+  border: 1px solid #011627;
+}
+[data-theme="light"] .codeBlockTitle_Ktv7 {
+  border-bottom: 1px solid #555555f0 !important;
 }
