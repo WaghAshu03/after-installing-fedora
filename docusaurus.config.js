@@ -50,7 +50,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/WaghAshu03/my_linux_templates",
         },
-        blog: false,
+        // blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -117,10 +117,10 @@ const config = {
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
+              // {
+              //   label: "Blog",
+              //   to: "/blog",
+              // },
               {
                 label: "GitHub",
                 href: "https://github.com/waghAshu03/",
