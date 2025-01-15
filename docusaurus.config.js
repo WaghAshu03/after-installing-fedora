@@ -63,6 +63,9 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
+      colorMode: {
+        defaultMode: "dark",
+      },
       navbar: {
         title: siteName,
         // style: "primary",
@@ -131,9 +134,10 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: prismThemes.github,
-        // darkTheme: prismThemes.nightOwl,
-        darkTheme: prismThemes.dracula,
+        // theme: prismThemes.github,
+        theme: prismThemes.nightOwl,
+        darkTheme: prismThemes.nightOwl,
+        // darkTheme: prismThemes.dracula,
         // darkTheme: prismThemes.oneDark,
         // darkTheme: prismThemes.vsDark,
       },
