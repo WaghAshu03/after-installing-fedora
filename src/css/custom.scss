@@ -5,7 +5,12 @@
  */
 
 /* You can override the default Infima variables here. */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
+  scroll-behavior: smooth;
   --ifm-color-primary: #2e1ea9;
   --ifm-color-primary-dark: #291b98;
   --ifm-color-primary-darker: #271990;

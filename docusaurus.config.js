@@ -41,7 +41,7 @@ const config = {
 
   presets: [
     [
-      "classic",
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -52,7 +52,7 @@ const config = {
         },
         // blog: false,
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: "./src/css/custom.scss",
         },
       }),
     ],
@@ -144,6 +144,7 @@ const config = {
     }),
 
   plugins: [
+    "docusaurus-plugin-sass",
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
