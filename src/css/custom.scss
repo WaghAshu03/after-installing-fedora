@@ -18,23 +18,56 @@ html {
   --ifm-color-primary-light: #3321ba;
   --ifm-color-primary-lighter: #3522c2;
   --ifm-color-primary-lightest: #3e2ad9;
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  .navbar {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .navbar-sidebar {
+    background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+  }
+
+  @media (min-width: 1000px) {
+    nav.navbar.navbar--fixed-top {
+      backdrop-filter: blur(5px);
+      background-color: rgb(255, 255, 255, 0.6);
+    }
+  }
+
+  .footer {
+    background-color: #101010;
+    border-top: 1px solid #999;
+  }
+
+  .theme-code-block {
+    border: 1px solid #ddd;
+  }
+
+  .theme-code-block-highlighted-line {
+    background-color: #e5e5e5;
+  }
+
+  .codeBlockTitle_Ktv7 {
+    border-bottom: 1px solid #ddd !important;
+    background-color: #f3f4f6;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #37c876;
-  --ifm-color-primary-dark: #31b46a;
-  --ifm-color-primary-darker: #2faa64;
-  --ifm-color-primary-darkest: #278c53;
-  --ifm-color-primary-light: #4bce84;
-  --ifm-color-primary-lighter: #55d08b;
-  --ifm-color-primary-lightest: #73d99f;
-  --ifm-background-color: #000000;
-}
+  // --ifm-color-primary: #37c876;
+  // --ifm-color-primary-dark: #31b46a;
+  // --ifm-color-primary-darker: #2faa64;
+  // --ifm-color-primary-darkest: #278c53;
+  // --ifm-color-primary-light: #4bce84;
+  // --ifm-color-primary-lighter: #55d08b;
+  // --ifm-color-primary-lightest: #73d99f;
+  // --ifm-background-color: #000000;
 
-[data-theme="dark"] {
   --ifm-color-primary: #199cf2;
   --ifm-color-primary-dark: #0d8ee3;
   --ifm-color-primary-darker: #0c86d7;
@@ -43,50 +76,54 @@ html {
   --ifm-color-primary-lighter: #3facf4;
   --ifm-color-primary-lightest: #65bdf6;
   --ifm-background-color: #101010;
-}
 
-[data-theme="dark"] {
+  --ifm-card-background-color: black;
+
   background-color: rgb(7, 7, 7);
-}
 
-[data-theme="dark"] .navbar {
-  background-color: rgb(7, 7, 7);
-}
-
-@media (min-width: 1000px) {
-  [data-theme="dark"] nav.navbar.navbar--fixed-top {
-    background-color: rgb(7, 7, 7, 0.6);
+  .navbar {
+    background-color: rgb(7, 7, 7);
   }
 
-  [data-theme="light"] nav.navbar.navbar--fixed-top {
-    background-color: rgb(255, 255, 255, 0.7);
+  .navbar-sidebar {
+    background-color: rgb(7, 7, 7, 0.5);
+    backdrop-filter: blur(5px);
   }
 
-  nav.navbar.navbar--fixed-top {
-    backdrop-filter: blur(12px);
+  @media (min-width: 1000px) {
+    nav.navbar.navbar--fixed-top {
+      backdrop-filter: blur(5px);
+      background-color: rgb(7, 7, 7, 0.6);
+    }
   }
-}
 
-[data-theme="dark"] .navbar-sidebar {
-  background-color: rgb(7, 7, 7, 0.5);
-  /* background-color: red; */
-  backdrop-filter: blur(5px);
-}
+  .sidebar_njMd {
+    border-right: 1px solid #404040;
+  }
 
-[data-theme="dark"] .sidebar_njMd {
-  border-right: 1px solid #404040;
-  /* background-color: red !important; */
-  /* backdrop-filter: blur(5px); */
-}
+  .footer {
+    background-color: #161616;
+    border-top: 1px solid #252525;
+  }
 
-[data-theme="dark"] .footer {
-  background-color: #161616;
-  border-top: 1px solid #252525;
-}
+  .theme-code-block {
+    border: 1px solid #404040;
+  }
 
-[data-theme="light"] .footer {
-  background-color: #101010;
-  border-top: 1px solid #999;
+  .theme-code-block-highlighted-line {
+    background-color: #111;
+  }
+
+  .codeBlockTitle_Ktv7 {
+    background-color: #161616;
+    font-size: 0.9rem;
+    color: white;
+    border-bottom: 1px solid #404040 !important;
+  }
+
+  .prism-code {
+    background-color: black !important;
+  }
 }
 
 .hero {
@@ -94,29 +131,4 @@ html {
   background-size: cover;
   backdrop-filter: blur(5px);
   color: black;
-}
-
-[data-theme="dark"] .theme-code-block {
-  border: 1px solid #404040;
-}
-
-[data-theme="dark"] .codeBlockTitle_Ktv7 {
-  background-color: #161616;
-  /* font-weight: normal; */
-  /* font-family: sans-serif; */
-  font-size: 0.9rem;
-  color: white;
-  border-bottom: 1px solid #404040 !important;
-}
-
-[data-theme="dark"] .prism-code {
-  background-color: black !important;
-}
-
-[data-theme="light"] .theme-code-block {
-  border: 1px solid #011627;
-}
-
-[data-theme="light"] .codeBlockTitle_Ktv7 {
-  border-bottom: 1px solid #555555f0 !important;
 }
