@@ -55,6 +55,19 @@ html {
     border-bottom: 1px solid #ddd !important;
     background-color: #f3f4f6;
   }
+
+  .button-color {
+    a {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .hr {
+    border: 1px solid #ccc;
+    margin-top: 4rem;
+    width: 100%;
+  }
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -123,6 +136,19 @@ html {
 
   .prism-code {
     background-color: black !important;
+  }
+
+  .button-color {
+    a {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  .hr {
+    border: 1px solid #333;
+    margin-top: 4rem;
+    width: 100%;
   }
 }
 
