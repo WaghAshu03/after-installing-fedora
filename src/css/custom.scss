@@ -8,6 +8,91 @@
 // html {
 // scroll-behavior: smooth;
 // }
+@media (width > 600px) {
+  .markdown {
+    h1,
+    h2,
+    h3 {
+      transition: 300ms;
+    }
+    h1:hover,
+    h2:hover,
+    h3:hover {
+      background: linear-gradient(
+        to right,
+        #53cd5b 10%,
+        #2c80ff 20%,
+        #5a97e6 30%,
+        #01cd59 60%,
+        #764ada 80%,
+        #c9de51 90%,
+        #5162de 95%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      background-size: 500% auto;
+      animation: textShine 4s ease infinite alternate;
+    }
+
+    @keyframes textShine {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    h1:hover {
+      font-size: 3.8rem;
+    }
+    h2:hover {
+      font-size: 2.8rem;
+    }
+    h3:hover {
+      font-size: 1.8rem;
+    }
+  }
+
+  .docMainContainer_TBSr {
+    h1 {
+      transition: 300ms;
+    }
+    h1:hover {
+      background: linear-gradient(
+        to right,
+        #53cd5b 10%,
+        #2c80ff 20%,
+        #5a97e6 30%,
+        #01cd59 60%,
+        #764ada 80%,
+        #c9de51 90%,
+        #5162de 95%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-fill-color: transparent;
+      background-size: 500% auto;
+      animation: textShine 4s ease infinite alternate;
+    }
+
+    @keyframes textShine {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    h1:hover {
+      font-size: 3.8rem;
+    }
+  }
+}
 
 :root {
   // scroll-behavior: smooth;
