@@ -1,0 +1,8 @@
+{
+  "label": "Setting Up RPM Fusion",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "RPM Fusion is a third-party repository that provides additional software for Fedora that isn't included in the official repositories due to licensing, patent, or legal reasons."
+  }
+}

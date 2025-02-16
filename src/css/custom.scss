@@ -8,6 +8,7 @@
 // html {
 // scroll-behavior: smooth;
 // }
+
 @media (width > 600px) {
   .markdown {
     h1,
@@ -155,6 +156,9 @@
   }
 }
 
+[data-theme="light"] {
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
   // --ifm-color-primary: #37c876;
@@ -177,21 +181,23 @@
 
   --ifm-card-background-color: black;
 
-  background-color: rgb(7, 7, 7);
+  background-color: rgb(8, 8, 8);
+  // background-color: #000;
+  // background-color: #11111101;
 
   .navbar {
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(8, 8, 8);
   }
 
   .navbar-sidebar {
-    background-color: rgb(7, 7, 7, 0.5);
+    background-color: rgb(8, 8, 8, 0.5);
     backdrop-filter: blur(5px);
   }
 
   @media (min-width: 1000px) {
     nav.navbar.navbar--fixed-top {
       backdrop-filter: blur(5px);
-      background-color: rgb(7, 7, 7, 0.6);
+      background-color: rgb(8, 8, 8, 0.6);
     }
   }
 

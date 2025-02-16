@@ -1,0 +1,27 @@
+---
+sidebar_position: 2
+---
+
+# Fixing: Dual Boot Time Issue
+
+Conflict in time occurs in windows and linux as linux keeps time in UTC (or universal time) and windows keeps time in local time, so we will just instruct linux to keep time in local time, same as windows; for that enter following command.
+
+```bash
+timedatectl set-local-rtc 1 --adjust-system-clock
+```
+
+now just sync time on linux and reboot if time not correct, and similarly sync time on windows and reboot if time not correct, this will fix time for linux and windows.
+
+reference taken from:
+
+<center>
+    <iframe 
+        src="https://www.youtube-nocookie.com/embed/VaIgbTOvAd0?si=F5O2T7-axeHms7eS" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        style={{ width: "90%",maxWidth: "800px", aspectRatio: "16/9" }}
+        ></iframe>
+</center>

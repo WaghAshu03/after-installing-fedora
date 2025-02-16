@@ -1,0 +1,109 @@
+---
+sidebar_position: 3
+---
+
+# Installing Multimedia Codecs
+
+## Switch to full ffmpeg
+
+Fedora ffmpeg-free works most of the time, but one will experience version missmatch from time to time. Switch to the rpmfusion provided ffmpeg build that is better supported. You will still need to follow the next section for additional codecs or plugins related to packages you might have installed.
+
+```bash
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+```
+
+There you don't need libavcodec-freeworld that is only meant to complement the ffmpeg-free package (and related libraries).
+
+## Install additional codec
+
+This will allows the application using the gstreamer framework and other multimedia software, to play others restricted codecs:
+
+- The following command will install the complements multimedia packages needed by gstreamer enabled applications:
+
+  ```bash
+  sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+  ```
+
+## Hardware Accelerated Codec
+
+### Intel(recent)
+
+\# Using the rpmfusion-nonfree section
+
+```bash
+sudo dnf install intel-media-driver
+```
+
+### Intel(older)
+
+\# Using the rpmfusion-free section
+
+```bash
+sudo dnf install libva-intel-driver
+```
+
+### Hardware codecs with AMD (mesa)
+
+\# Using the rpmfusion-free section This is needed since Fedora 37 and later... and mainly concern AMD hardware since NVIDIA hardware with nouveau doesn't work well
+
+```bash
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+```
+
+If using i686 compat libraries (for steam or alikes):
+
+```bash
+sudo dnf swap mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
+sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
+```
+
+### Hardware codecs with NVIDIA
+
+The Nvidia proprietary driver doesn't support VAAPI natively, but there is a wrapper that can bridge NVDEC/NVENC with VAAPI
+
+```bash
+sudo dnf install libva-nvidia-driver
+```
+
+You can also install both 32bit and 64bit flavor in one command as needed.
+
+```bash
+sudo dnf install libva-nvidia-driver.{i686,x86_64}
+```
+
+## Various firmwares
+
+- Tainted nonfree is dedicated to non-FLOSS packages without a clear redistribution status by the copyright holder. But is allowed as part of hardware inter-operability between operating systems in some countries :
+
+  ```bash
+  sudo dnf install rpmfusion-nonfree-release-tainted
+  sudo dnf --repo=rpmfusion-nonfree-tainted install "\*-firmware"
+  ```
+
+## Some More Codecs
+
+- Run the following commands to install multimedia codecs in your Fedora system:
+
+  ```bash
+  sudo dnf install gstreamer1-plugins-{bad-*,good-*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-
+  sudo dnf install lame* --exclude=lame-devel
+  sudo dnf group upgrade --with-optional Multimedia
+  sudo dnf install x265-libs libde265
+  ```
+
+- Then install all codes and drivers from softwares:
+<center>
+  <div
+  style={{
+    width: "85%",
+    maxWidth:"600px"
+  }}
+  >
+    <img src="/img/codecs-and-drivers-0.png" alt="codecs-and-drivers-0" />
+    <br/>
+    <img src="/img/codecs-and-drivers-1.png" alt="codecs-and-drivers-1"/>
+    <br/>
+    <img src="/img/codecs-and-drivers-2.png" alt="codecs-and-drivers-2"  />
+  </div>
+</center>
